@@ -11,11 +11,10 @@ require_relative 'lib/product'
 require_relative 'lib/book'
 require_relative 'lib/film'
 
-film = Film.new(title: 'Leon', director: 'Luc Besson', price: 40, year: 1994, amount: 100)
-film.update(amount: 5)
-
-book = Book.new(title: 'Harry Potter', genre: 'Fantasy', amount: 7, author: 'J. K. Eowling', price: 160)
-book.update(author: '	J. K. Rowling', price: 120)
+current_path = File.dirname(__FILE__)
+film = Film.from_file(current_path + '/data/movies/01.txt')
+book = Book.from_file(current_path + '/data/books/01.txt')
 
 puts film
 puts book
+

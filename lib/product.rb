@@ -14,4 +14,9 @@ class Product
     @price = params[:price] if params[:price]
     @amount = params[:amount] if params[:amount]
   end
+
+  def self.from_file(file_path)
+    raise NotImplementedError
+  end
+
 end
