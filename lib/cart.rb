@@ -7,8 +7,8 @@ class Cart
 
   def checkout
     total_sum = 0
-    @goods.each do |good| x = good.price
-    total_sum += x
+    @goods.each do |good|
+    total_sum += good.price
     end
     total_sum
   end
