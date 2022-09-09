@@ -32,5 +32,4 @@ class Book < Product
       amount: lines[4].to_i
     )
   end
-
 end

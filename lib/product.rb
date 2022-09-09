@@ -18,5 +18,4 @@ class Product
   def self.from_file(file_path)
     raise NotImplementedError
   end
-
 end
