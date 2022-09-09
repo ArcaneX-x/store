@@ -7,7 +7,7 @@ class Product
   end
 
   def to_s
-    "Price: #{@price} USD (balance #{@amount})"
+    "Price: #{@price} USD (in stock: #{@amount})"
   end
 
   def update(params)

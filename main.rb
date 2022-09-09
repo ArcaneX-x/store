@@ -13,7 +13,6 @@ require_relative 'lib/film'
 require_relative 'lib/disk'
 require_relative 'lib/product_collection'
 require_relative 'lib/cart'
-require 'byebug'
 
 collection = ProductCollection.from_dir(File.join(__dir__, 'data'))
 collection.sort!(by: :amount, order: :asc)
@@ -44,7 +43,7 @@ until user_choice == 0
   cart.goods << collection.products[user_choice - 1]
 end
 
-puts 'You cart:'
+puts 'Your cart:'
 cart.goods.each.with_index(1) { |elem, index| puts "#{index}. #{elem}" }
 puts
 puts "Total amount: #{cart.checkout} USD"
